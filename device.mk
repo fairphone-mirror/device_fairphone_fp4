@@ -997,6 +997,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
+# Enable Dual SIM by default
+PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
+
 # Vendor property to enable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.enableadvancedscan=true
