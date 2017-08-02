@@ -290,6 +290,10 @@ PRODUCT_PACKAGES += \
     update_engine_sideload \
     update_verifier
 
+# Shorten wait time for shutdown
+PRODUCT_PROPERTY_OVERRIDES += \
+    sys.vendor.shutdown.waittime=500
+
 
 # Skip boot jars check
 SKIP_BOOT_JARS_CHECK := true
