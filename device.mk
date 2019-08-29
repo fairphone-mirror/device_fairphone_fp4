@@ -871,6 +871,9 @@ PRODUCT_COPY_FILES += \
     $(FP_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
     $(FP_PATH)/configs/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml
 
+# privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
+PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
+
 
 # Protobuf
 PRODUCT_PACKAGES += \
