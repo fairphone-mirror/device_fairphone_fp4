@@ -891,6 +891,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.qcomsysd.enabled=1
 
 
+# target specific runtime prop for qspm
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qspm.enable=true
+
+
 # QSSI Whitelist
 $(call inherit-product, $(FP_PATH)/qssi_allowlist.mk)
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_IGNORE_PATHS := /system/system_ext/
