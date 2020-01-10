@@ -130,6 +130,7 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := vendor/qcom/opensource/core-utils/
 
 DEVICE_MANIFEST_FILE := $(FP_PATH)/manifest.xml
 DEVICE_MATRIX_FILE   := $(FP_PATH)/compatibility_matrix.xml
+ODM_MANIFEST_FILES   := $(FP_PATH)/manifest-qva.xml
 
 
 # Init
