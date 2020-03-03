@@ -22,9 +22,6 @@ $(call inherit-product-if-exists, vendor/fairphone/fp4/device-vendor.mk)
 # Inherit Virtual AB configs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
 
-# Inherit GSI keys to first stage ramdisk
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Inherit generic AOSP content for telephony based 64-bit devices
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
