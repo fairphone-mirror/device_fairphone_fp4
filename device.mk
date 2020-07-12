@@ -580,6 +580,10 @@ PRODUCT_PACKAGES += \
     ims_ext_common.xml
 
 
+# Enable incremental FS feature
+PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
+
+
 # Init
 PRODUCT_PACKAGES += \
     init.crda.sh \
