@@ -34,6 +34,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 PRODUCT_SHIPPING_API_LEVEL := 30
 SHIPPING_API_LEVEL := 30
 
+# VNDK support
+PRODUCT_EXTRA_VNDK_VERSIONS := 30
+
 
 PRODUCT_BRAND := Fairphone
 PRODUCT_DEVICE := FP4
