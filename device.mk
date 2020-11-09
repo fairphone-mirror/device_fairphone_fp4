@@ -798,6 +798,11 @@ PRODUCT_COPY_FILES += \
     $(FP_PATH)/configs/public.libraries.system_ext-qti.txt:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/public.libraries-qti.txt
 
 
+# Target specific Netflix custom property
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.netflix.bsp_rev=Q7250-19133-1
+
+
 # NFC
 $(call inherit-product, vendor/st/nfc/st21nfc/NfcDeviceConfig.mk)
 
