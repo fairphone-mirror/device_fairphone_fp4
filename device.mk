@@ -1155,6 +1155,11 @@ SOONG_CONFIG_NAMESPACES += qssi_vs_vendor
 SOONG_CONFIG_qssi_vs_vendor += qssi_or_vendor
 SOONG_CONFIG_qssi_vs_vendor_qssi_or_vendor := vendor
 
+# BT Audio
+SOONG_CONFIG_NAMESPACES += bredr_vs_btadva
+SOONG_CONFIG_bredr_vs_btadva += bredr_or_btadva
+SOONG_CONFIG_bredr_vs_btadva_bredr_or_btadva := bredr
+
 # display
 SOONG_CONFIG_NAMESPACES += qtidisplaycommonsys
 SOONG_CONFIG_qtidisplaycommonsys := displayconfig_enabled
