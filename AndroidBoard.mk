@@ -16,7 +16,7 @@ endif
 DTC := $(HOST_OUT_EXECUTABLES)/dtc$(HOST_EXECUTABLE_SUFFIX)
 
 # ../../ prepended to paths because kernel is at ./kernel/msm-x.x
-TEMP_TOP=$(shell pwd)
+TEMP_TOP := $(abspath .)
 TARGET_KERNEL_MAKE_ENV := DTC_EXT=$(TEMP_TOP)/$(DTC)
 TARGET_KERNEL_MAKE_ENV += CONFIG_BUILD_ARM64_DT_OVERLAY=y
 
@@ -143,8 +143,8 @@ endif
 #----------------------------------------------------------------------
 # override default make with prebuilt make path (if any)
 #----------------------------------------------------------------------
-ifneq (, $(wildcard $(shell pwd)/prebuilts/build-tools/linux-x86/bin/make))
-    MAKE := $(shell pwd)/prebuilts/build-tools/linux-x86/bin/$(MAKE)
+ifneq (, $(wildcard $(TEMP_TOP)/prebuilts/build-tools/linux-x86/bin/make))
+    MAKE := $(TEMP_TOP)/prebuilts/build-tools/linux-x86/bin/$(MAKE)
 endif
 
 #----------------------------------------------------------------------
