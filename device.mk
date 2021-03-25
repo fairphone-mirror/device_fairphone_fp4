@@ -1158,6 +1158,10 @@ SOONG_CONFIG_NAMESPACES += qtidisplaycommonsys
 SOONG_CONFIG_qtidisplaycommonsys := displayconfig_enabled
 SOONG_CONFIG_qtidisplaycommonsys_displayconfig_enabled := true
 
+SOONG_CONFIG_NAMESPACES += qtiunifeddraw
+SOONG_CONFIG_qtiunifeddraw := qtiunifeddraw_enabled
+SOONG_CONFIG_qtiunifeddraw_qtiunifeddraw_enabled := true
+
 # lights
 SOONG_CONFIG_NAMESPACES += lights
 SOONG_CONFIG_lights += lighttargets
