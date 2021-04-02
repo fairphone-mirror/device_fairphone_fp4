@@ -435,6 +435,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.dpmhalservice.enable=1
 
 
+# DebugFS
+PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
+
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4-service.clearkey
