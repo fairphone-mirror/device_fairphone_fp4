@@ -55,7 +55,7 @@ TARGET_SYSTEM_PROP += $(FP_PATH)/system.prop
 
 # We don't have the calibration data as this sort of
 # data can only be generated at the factory so don't generate persist.img
-FP4_SKIP_PERSIST_IMG := true
+TARGET_SKIP_PERSIST_IMG := true
 
 
 # Flag to check if tree has proprietary headers
