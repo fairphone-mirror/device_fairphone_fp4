@@ -136,6 +136,9 @@ persist.vendor.overlay.izat.optin=rro
 # Property for backup NTP Server
 persist.backup.ntpServer="0.pool.ntp.org"
 
+# Enable in-band ring
+persist.bluetooth.disableinbandringing=false
+
 #Property to enable Mag filter
 persist.vendor.sensors.enable.mag_filter=true
 
