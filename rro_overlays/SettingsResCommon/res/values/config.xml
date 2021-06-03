@@ -22,4 +22,7 @@
     <!-- Whether to enable "show operator name in the status bar" setting -->
     <bool name="config_showOperatorNameInStatusBar">true</bool>
 
+    <!-- Whether there is a boot sounds checkbox -->
+    <bool name="has_boot_sounds">true</bool>
+
 </resources>
