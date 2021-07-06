@@ -30,4 +30,6 @@
 
     <!-- Default for Settings.Global.WIFI_SCAN_ALWAYS_AVAILABLE -->
     <integer name="def_wifi_scan_always_available">1</integer>
+
+    <integer name="def_screen_off_timeout">30000</integer>
 </resources>
