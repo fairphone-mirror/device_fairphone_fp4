@@ -91,6 +91,12 @@
 
     <!-- Screen and Display -->
 
+    <!-- Display cutout configuration -->
+    <string translatable="false" name="config_mainBuiltInDisplayCutout">
+        M -60,0 L -0,81 L 0,81 L 60,0 Z
+    </string>
+    <bool name="config_fillMainBuiltInDisplayCutout">true</bool>
+
     <!-- List supported color modes. -->
     <integer-array name="config_availableColorModes">
         <item>0</item> <!-- COLOR_MODE_NATURAL -->     <!-- This uses colorimetric render intents-->
