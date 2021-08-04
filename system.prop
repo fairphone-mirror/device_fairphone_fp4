@@ -162,3 +162,6 @@ persist.vendor.ssr.restart_level=ALL_ENABLE
 
 # iwlan for VoWiFi
 persist.vendor.data.iwlan.enable=true
+
+# IPV6
+persist.vendor.data.profile_update=true
