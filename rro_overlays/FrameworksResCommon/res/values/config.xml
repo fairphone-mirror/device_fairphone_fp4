@@ -304,6 +304,12 @@
 
     <!-- Telephony, IMS, and related. -->
 
+    <string-array translatable="false" name="config_telephonyEuiccDeviceCapabilities">
+        <item>"gsm,9"</item>
+        <item>"utran,10"</item>
+        <item>"eutran,15"</item>
+    </string-array>
+
     <!-- Set to true to add links to Cell Broadcast app from Settings and MMS app. -->
     <bool name="config_cellBroadcastAppLinks">true</bool>
 
