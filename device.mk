@@ -34,6 +34,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 PRODUCT_SHIPPING_API_LEVEL := 30
 SHIPPING_API_LEVEL := 31
 
+# GRF levels
+BOARD_SHIPPING_API_LEVEL := 30
+BOARD_API_LEVEL := 30
+
+
 # VNDK support
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
 
@@ -43,6 +48,9 @@ PRODUCT_DEVICE := FP4
 PRODUCT_MANUFACTURER := Fairphone
 
 TARGET_BOARD_PLATFORM := lito
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.soc.manufacturer=QTI
 
 
 # Allow using custom and expressive names for our Android flavors while in fact
@@ -616,6 +624,7 @@ PRODUCT_PACKAGES += \
     init.qcom.usb.rc \
     init.qcom.usb.sh \
     init.qcom.efs.sync.sh \
+    init.qti.early_init.sh \
     init.qti.ufs.rc \
     ueventd.qcom.rc \
     qca6234-service.sh \
