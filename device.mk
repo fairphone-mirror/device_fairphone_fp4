@@ -32,7 +32,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # API level the device was shipped
 PRODUCT_SHIPPING_API_LEVEL := 30
-SHIPPING_API_LEVEL := 30
+SHIPPING_API_LEVEL := 31
 
 # VNDK support
 PRODUCT_EXTRA_VNDK_VERSIONS := 30
