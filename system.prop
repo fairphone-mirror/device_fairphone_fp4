@@ -150,3 +150,5 @@ ro.media.recorder-max-base-layer-fps=60
 #Battery Property
 ro.charger.enable_suspend=1
 
+# Disable Ramdump
+persist.vendor.ssr.restart_level=ALL_ENABLE
