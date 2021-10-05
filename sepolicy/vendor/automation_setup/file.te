@@ -1,0 +1,2 @@
+# /data/userdata_automation
+type userdata_automation_file, file_type, data_file_type, core_data_file_type;

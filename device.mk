@@ -237,6 +237,12 @@ PRODUCT_COPY_FILES += \
 include $(FP_PATH)/audio_properties.mk
 
 
+# Automation/ATS
+PRODUCT_PACKAGES += \
+    automation_setup \
+    automation_adb_setup
+
+
 # ANT
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0 \

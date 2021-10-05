@@ -1,0 +1,12 @@
+sh_binary {
+    name: "automation_setup",
+
+    src: "automation_setup.sh",
+    init_rc: ["automation_setup.rc"],
+}
+
+sh_binary {
+    name: "automation_adb_setup",
+
+    src: "automation_adb_setup.sh",
+}
