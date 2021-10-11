@@ -1168,7 +1168,7 @@ SOONG_CONFIG_qtidisplaycommonsys_displayconfig_enabled := true
 # lights
 SOONG_CONFIG_NAMESPACES += lights
 SOONG_CONFIG_lights += lighttargets
-SOONG_CONFIG_lights_lighttargets := lightaidltarget
+SOONG_CONFIG_lights_lighttargets := lightaidlV1target
 
 
 # Inherit the proprietary setup
