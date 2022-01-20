@@ -282,6 +282,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.service.bdroid.soc.alwayson=true \
     ro.vendor.bluetooth.wipower=false
 
+# Bluetooth Properties
+# Hearing Aid Audio Support Using Bluetooth LE
+PRODUCT_PRODUCT_PROPERTIES += \
+    bluetooth.profile.asha.central=true
+
 
 # Board platforms lists to be used for
 # TARGET_BOARD_PLATFORM specific featurization
