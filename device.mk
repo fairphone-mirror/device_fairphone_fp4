@@ -683,6 +683,11 @@ PRODUCT_PACKAGES_DEBUG += \
     init.qti.usb.debug.sh
 
 
+# IORAP
+PRODUCT_SYSTEM_PROPERTIES += \
+    persist.device_config.runtime_native_boot.iorap_perfetto_enable=true
+
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
