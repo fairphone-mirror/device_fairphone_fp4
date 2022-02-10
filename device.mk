@@ -285,7 +285,7 @@ PRODUCT_VENDOR_PROPERTIES += \
 # Bluetooth Properties
 # Hearing Aid Audio Support Using Bluetooth LE
 PRODUCT_PRODUCT_PROPERTIES += \
-    bluetooth.profile.asha.central=true
+    bluetooth.profile.asha.central.enabled=true
 
 
 # Board platforms lists to be used for
