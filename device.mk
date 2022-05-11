@@ -50,6 +50,11 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
 
 
+# Compile SystemUI on device with `speed`.
+PRODUCT_VENDOR_PROPERTIES += \
+    dalvik.vm.systemuicompilerfilter=speed
+
+
 # Allow using custom and expressive names for our Android flavors while in fact
 # targeting the same model with all of them.
 TARGET_PRODUCT_OVERRIDE := FP4eea
