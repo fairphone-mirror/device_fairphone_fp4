@@ -931,6 +931,10 @@ PRODUCT_PACKAGES += \
     ip-up-vpn
 
 
+# Preopt SystemUI.
+PRODUCT_DEXPREOPT_SPEED_APPS += SystemUI  # For AOSP
+
+
 # Priv-app permissions
 PRODUCT_COPY_FILES += \
     $(FP_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
