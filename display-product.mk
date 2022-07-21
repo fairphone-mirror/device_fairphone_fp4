@@ -42,6 +42,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     debug.sf.perf_fps_early_gl_phase_offset_ns=-5000000 \
     debug.sf.perf_fps_early_phase_offset_ns=-5000000 \
     debug.sf.perf_fps_late_sf_phase_offset_ns=-5000000 \
+    debug.sf.predict_hwc_composition_strategy=0 \
     persist.demo.hdmirotationlock=false \
     persist.sys.sf.color_saturation=1.0 \
     vendor.display.comp_mask=0 \
