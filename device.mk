@@ -987,6 +987,11 @@ PRODUCT_PACKAGES += \
     android.hardware.radio@1.4
 
 
+#add RemoteProvisioner to product packages
+PRODUCT_PACKAGES += \
+    RemoteProvisioner
+
+
 # RenderScript
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
