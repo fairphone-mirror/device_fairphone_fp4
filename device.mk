@@ -49,7 +49,7 @@ PRODUCT_MANUFACTURER := Fairphone
 
 TARGET_BOARD_PLATFORM := lito
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.soc.manufacturer=QTI
 
 
@@ -105,7 +105,7 @@ PRODUCT_BUILD_SUPER_PARTITION := true
 
 
 # OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.oem_unlock_supported=1
 
 
@@ -275,7 +275,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.bluetooth_le.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.fflag.override.settings_bluetooth_hearing_aid=true \
     persist.vendor.qcom.bluetooth.a2dp_offload_cap=sbc-aptx-aptxtws-aptxhd-aac-ldac-aptxadaptiver2 \
     persist.vendor.qcom.bluetooth.aac_vbr_ctl.enabled=true \
@@ -306,7 +306,7 @@ PRODUCT_PACKAGES += \
     update_verifier
 
 # Shorten wait time for shutdown
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     sys.vendor.shutdown.waittime=500
 
 
@@ -362,7 +362,7 @@ PRODUCT_PACKAGES += \
 
 
 # Dalvik/Heap
-PRODUCT_PROPERTY_OVERRIDES  += \
+PRODUCT_VENDOR_PROPERTIES  += \
     dalvik.vm.heapgrowthlimit=256m \
     dalvik.vm.heapmaxfree=8m \
     dalvik.vm.heapminfree=512k \
@@ -372,7 +372,7 @@ PRODUCT_PROPERTY_OVERRIDES  += \
 
 
 # Use 64-bit dex2oat for better dexopt time.
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
 
@@ -433,7 +433,7 @@ PRODUCT_PACKAGES += \
     vendor.qti.hardware.display.composer@3.0.vendor
 endif
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.sys.sf.color_mode=0
 
 
@@ -443,7 +443,7 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 
 
 # DPM
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.dpmhalservice.enable=1
 
 
@@ -461,7 +461,7 @@ PRODUCT_PACKAGES += \
 
 
 # Encryption
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.volume.filenames_mode = "aes-256-cts"
 
 
@@ -520,7 +520,7 @@ PRODUCT_PACKAGES += \
 
 
 # FRP
-PRODUCT_PROPERTY_OVERRIDES += ro.frp.pst=/dev/block/bootdevice/by-name/frp
+PRODUCT_VENDOR_PROPERTIES += ro.frp.pst=/dev/block/bootdevice/by-name/frp
 
 
 # fs Config
@@ -568,12 +568,12 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.location.gps.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.location.gps.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.backup.ntpServer=0.pool.ntp.org
 
 
 # Graphics
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.hardware.vulkan=adreno \
     ro.hardware.egl=adreno \
     ro.gfx.driver.1=com.qualcomm.qti.gpudrivers.lito.api30
@@ -606,7 +606,7 @@ PRODUCT_PACKAGES += \
 
 
 # Enable incremental FS feature
-PRODUCT_PROPERTY_OVERRIDES += ro.incremental.enable=1
+PRODUCT_VENDOR_PROPERTIES += ro.incremental.enable=1
 
 
 # Init
@@ -763,7 +763,7 @@ PRODUCT_PACKAGES += \
 endif
 
 #Vendor property to enable Codec2 for audio and OMX for Video
-PRODUCT_PROPERTY_OVERRIDES += debug.stagefright.ccodec=1
+PRODUCT_VENDOR_PROPERTIES += debug.stagefright.ccodec=1
 
 PRODUCT_COPY_FILES += \
     $(FP_PATH)/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
@@ -791,7 +791,7 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.stagefright.omx_default_rank=0 \
     media.settings.xml=/vendor/etc/media_profiles_vendor.xml
 
@@ -801,7 +801,7 @@ PRODUCT_PACKAGES += \
 
 
 # Metadata encryption
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.crypto.dm_default_key.options_format.version = 2 \
     ro.crypto.volume.metadata.method=dm-default-key
 
@@ -821,20 +821,20 @@ PRODUCT_COPY_FILES += \
 
 
 # Target specific Netflix custom property
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.netflix.bsp_rev=Q7250-19133-1
 
 
 # NFC
 $(call inherit-product, vendor/st/nfc/st21nfc/NfcDeviceConfig.mk)
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.st_nfc_defaut_se=SIM1 \
     ro.hardware.nfc_nci=pn54x
 
 
 # OEM Unlock reporting
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.oem_unlock_supported=1
 
 
@@ -849,7 +849,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # 196608 is decimal for 0x30000 to report version 3
 # 196609 is decimal for 0x30001 to report version 3.1
 # 196610 is decimal for 0x30002 to report version 3.2
-PRODUCT_PROPERTY_OVERRIDES  += \
+PRODUCT_VENDOR_PROPERTIES  += \
     ro.opengles.version=196610
 
 
@@ -876,7 +876,7 @@ PRODUCT_PACKAGES += \
 
 
 # Perf
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.extension_library=libqti-perfd-client.so
 
 PRODUCT_PACKAGES += \
@@ -891,7 +891,7 @@ PRODUCT_COPY_FILES += \
     vendor/qcom/opensource/power/config/lito/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
 
 # Pasr manager
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.power.pasr.enabled=true \
     vendor.pasr.activemode.enabled=true
 
@@ -907,7 +907,7 @@ PRODUCT_COPY_FILES += \
     $(FP_PATH)/configs/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml
 
 # privapp-permissions whitelisting (To Fix CTS :privappPermissionsMustBeEnforced)
-PRODUCT_PROPERTY_OVERRIDES += ro.control_privapp_permissions=enforce
+PRODUCT_VENDOR_PROPERTIES += ro.control_privapp_permissions=enforce
 
 
 # Protobuf
@@ -922,12 +922,12 @@ include $(FP_PATH)/utils.mk
 
 
 # QCOM Sysd
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.qcomsysd.enabled=1
 
 
 # target specific runtime prop for qspm
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.qspm.enable=true
 
 
@@ -976,7 +976,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.sensor.stepdetector.xml
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.sensors.debug.ssc_qmi_debug=true \
     persist.vendor.sensors.allow_non_default_discovery=true
 
@@ -1024,10 +1024,10 @@ PRODUCT_BOOT_JARS += \
     telephony-ext
 
 # Enable Dual SIM by default
-PRODUCT_PROPERTY_OVERRIDES += persist.radio.multisim.config=dsds
+PRODUCT_VENDOR_PROPERTIES += persist.radio.multisim.config=dsds
 
 # Vendor property to enable advanced network scanning
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.enableadvancedscan=true
 
 # Allow users to retain eSIM profiles after factory reset of user data
@@ -1035,7 +1035,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
     masterclear.allow_retain_esim_profiles_after_fdr=true
 
 # Other radio/RIL properties
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.telephony.iwlan_operation_mode=AP-assisted \
     persist.vendor.radio.apm_sim_not_pwdn=1 \
     persist.vendor.radio.sib16_support=1 \
@@ -1064,8 +1064,8 @@ TARGET_MOUNT_POINTS_SYMLINKS := false
 
 
 # USB
-PRODUCT_PROPERTY_OVERRIDES += vendor.usb.diag.func.name=diag
-PRODUCT_PROPERTY_OVERRIDES += vendor.usb.use_ffs_mtp=0
+PRODUCT_VENDOR_PROPERTIES += vendor.usb.diag.func.name=diag
+PRODUCT_VENDOR_PROPERTIES += vendor.usb.use_ffs_mtp=0
 
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.2-service-qti
@@ -1111,7 +1111,7 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 QC_WIFI_HIDL_FEATURE_DUAL_AP := true
 
 # Enable vendor properties.
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     wifi.aware.interface=wifi-aware0
 
 WLAN_CHIPSET := qca_cld3

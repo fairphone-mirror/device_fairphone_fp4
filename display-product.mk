@@ -29,7 +29,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += hardware/qcom/display/config/qdcm_calib_data_nt36672e_lcd_video_mode_dsi_novatek_fhd_plus_144Hz_with_DSC.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_nt36672e_90Hz_fhd_plus_video_mode_panel_with_DSC.xml
 
 
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     debug.egl.hw=0 \
     debug.mdpcomp.logs=0 \
     debug.sf.enable_advanced_sf_phase_offset=1 \
@@ -60,7 +60,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.gralloc.disable_ubwc=0
 
 #Set WCG properties
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     ro.surface_flinger.force_hwc_copy_for_virtual_displays=true \
     ro.surface_flinger.has_HDR_display=true \
     ro.surface_flinger.has_wide_color_display=true \
@@ -71,16 +71,16 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 
 ifneq (,$(filter userdebug eng, $(TARGET_BUILD_VARIANT)))
 # Recovery is enabled, logging is enabled
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.disable_hw_recovery_dump=0
 else
 # Recovery is enabled, logging is disabled
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.disable_hw_recovery_dump=1
 endif
 
 # Enable power async mode
-PRODUCT_PROPERTY_OVERRIDES += \
+PRODUCT_VENDOR_PROPERTIES += \
     vendor.display.enable_async_powermode=1
 
 QMAA_ENABLED_HAL_MODULES += display
