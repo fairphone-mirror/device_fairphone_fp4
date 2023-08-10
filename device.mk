@@ -785,6 +785,11 @@ PRODUCT_COPY_FILES += \
 
 
 # NFC
+$(call inherit-product, vendor/st/nfc/st21nfc/NfcDeviceConfig.mk)
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.st_nfc_defaut_se=SIM1 \
+    ro.hardware.nfc_nci=pn54x
 
 
 # Oemaids
