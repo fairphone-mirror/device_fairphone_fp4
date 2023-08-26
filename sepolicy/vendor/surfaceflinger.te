@@ -1,0 +1,4 @@
+# allow surfaceflinger to acess iris service
+
+hal_client_domain(surfaceflinger, hal_display_iris)
+
