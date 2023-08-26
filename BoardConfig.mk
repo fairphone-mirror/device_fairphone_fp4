@@ -281,6 +281,10 @@ TARGET_RECOVERY_FSTAB := $(FP_PATH)/rootdir/etc/recovery_AB_variant.fstab
 BOARD_SECCOMP_POLICY := $(FP_PATH)/seccomp
 
 
+# Sensors
+USE_SENSOR_MULTI_HAL := true
+
+
 # SEPolicy
 include device/qcom/sepolicy_vndr/SEPolicy.mk
 BOARD_VENDOR_SEPOLICY_DIRS += \
