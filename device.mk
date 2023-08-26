@@ -58,6 +58,10 @@ TARGET_SYSTEM_PROP += $(FP_PATH)/system.prop
 FP4_SKIP_PERSIST_IMG := true
 
 
+# Flag to check if tree has proprietary headers
+TARGET_HAS_PROPRIETARY_HEADERS ?= false
+
+
 # Overlays
 PRODUCT_PACKAGES += \
     FrameworksResCommon
@@ -112,10 +116,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.soundtrigger@2.3-impl \
     audio.a2dp.default \
-    audio.primary.lito \
     audio.r_submix.default \
-    audio.usb.default \
-    sound_trigger.primary.lito
+    audio.usb.default
 
 PRODUCT_PACKAGES += \
     libaudio-resampler \
@@ -126,15 +128,24 @@ PRODUCT_PACKAGES += \
     libcomprcapture \
     libexthwplugin \
     libhdmiedid \
-    libhdmipassthru \
     libhfp \
     libsndmonitor \
     libspkrprot \
     libqcompostprocbundle \
     libqcomvisualizer \
     libqcomvoiceprocessing \
-    libssrec \
     libvolumelistener
+
+ifeq ($(TARGET_HAS_PROPRIETARY_HEADERS), true)
+PRODUCT_PACKAGES += \
+    audio.primary.lito \
+    libhdmipassthru \
+    libssrec \
+    sound_trigger.primary.lito
+else
+# audio.primary.lito dependency
+PRODUCT_PACKAGES += libtinycompress
+endif
 
 #Audio DLKM
 AUDIO_DLKM := audio_adsp_loader.ko
@@ -291,18 +302,20 @@ PRODUCT_PACKAGES += \
     libgui_vendor \
     libqdMetaData \
     libqdutils \
-    libsdmcore \
     libsdmutils \
     lights.lito \
     memtrack.lito \
     modetest \
     vendor.display.config@1.14 \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service
+    vendor.qti.hardware.display.allocator-service
 
 # From hardware/qcom/display/config/display-product.mk
 include $(FP_PATH)/display-product.mk
 
+ifeq ($(TARGET_HAS_PROPRIETARY_HEADERS), true)
+PRODUCT_PACKAGES += \
+    libsdmcore \
+    vendor.qti.hardware.display.composer-service
 
 # Pixelworks
 PXLW_IRIS_SERVICE_PASSTHROUGH := 1
@@ -319,6 +332,18 @@ PRODUCT_PACKAGES += \
     libpwirisservice \
     vendor.pixelworks.hardware.display.iris-service \
     vendor.pixelworks.hardware.feature.irisfeature-service
+
+else
+# Following are dependencies for libsdmcore and
+# vendor.qti.hardware.display.composer-service
+PRODUCT_PACKAGES += \
+    libdrm.vendor \
+    libdrmutils \
+    libgpu_tonemapper \
+    libhistogram \
+    libsdedrm \
+    vendor.qti.hardware.display.composer@3.0.vendor
+endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.sf.color_mode=0
