@@ -853,8 +853,9 @@ PRODUCT_PACKAGES += \
 
 
 # Priv-app permissions
-#PRODUCT_COPY_FILES += \
-#    $(FP_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml
+PRODUCT_COPY_FILES += \
+    $(FP_PATH)/configs/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
+    $(FP_PATH)/configs/privapp-permissions-qti-system-ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/permissions/privapp-permissions-qti-system-ext.xml
 
 
 # Protobuf
@@ -877,6 +878,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 $(call inherit-product, $(FP_PATH)/qssi_allowlist.mk)
 PRODUCT_ARTIFACT_PATH_REQUIREMENT_IGNORE_PATHS := /system/system_ext/
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := true
+
+PRODUCT_COPY_FILES += \
+    $(FP_PATH)/configs/qti_allowlist.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_allowlist.xml \
+    $(FP_PATH)/configs/qti_allowlist_system_ext.xml:$(TARGET_COPY_OUT_SYSTEM_EXT)/etc/sysconfig/qti_allowlist_system_ext.xml
+
+
+# Radio
+PRODUCT_PACKAGES += \
+    android.hardware.radio.config@1.0 \
+    android.hardware.radio.deprecated@1.0 \
+    android.hardware.radio@1.4
 
 
 # RenderScript
@@ -936,6 +948,11 @@ PRODUCT_BOOT_JARS += \
 
 
 # Telephony Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.telephony.cdma.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.cdma.xml \
+    frameworks/native/data/etc/android.hardware.telephony.euicc.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/android.hardware.telephony.euicc.xml \
+    frameworks/native/data/etc/android.hardware.telephony.gsm.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.gsm.xml \
+    frameworks/native/data/etc/android.hardware.telephony.ims.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.telephony.ims.xml
 
 
 # Telephony wrappers
