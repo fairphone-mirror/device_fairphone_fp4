@@ -93,6 +93,11 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
 
 
+# APN
+PRODUCT_COPY_FILES += \
+    $(FP_PATH)/apns-conf.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/apns-conf.xml
+
+
 # Atrace
 PRODUCT_PACKAGES += \
     android.hardware.atrace@1.0-service
