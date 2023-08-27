@@ -66,6 +66,8 @@ TARGET_HAS_PROPRIETARY_HEADERS ?= false
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
     FrameworksResCommon \
+    FrameworksSettingsCommon \
+    SettingsResCommon \
     SystemUIResCommon \
     TelephonyResCommon
 
