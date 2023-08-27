@@ -64,7 +64,11 @@ TARGET_HAS_PROPRIETARY_HEADERS ?= false
 
 # Overlays
 PRODUCT_PACKAGES += \
-    FrameworksResCommon
+    CarrierConfigResCommon \
+    FrameworksResCommon \
+    SystemUIResCommon \
+    TelephonyResCommon
+
 
 # AB configurations
 ENABLE_AB := true # Enable AB partitions by default

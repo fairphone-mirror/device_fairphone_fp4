@@ -1,0 +1,9 @@
+runtime_resource_overlay {
+    name: "TelephonyResCommon",
+
+    product_specific: true,
+    certificate: "platform",
+
+    sdk_version: "current",
+
+}
