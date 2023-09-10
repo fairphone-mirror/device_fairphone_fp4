@@ -46,6 +46,19 @@
     <!-- Boolean indicating if current platform supports HFP inband ringing -->
     <bool name="config_bluetooth_hfp_inband_ringing_support">true</bool>
 
+    <!-- Average Current for bluetooth controller when idle. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_idle_cur_ma">3</integer>
+
+    <!-- Average Current for bluetooth controller when receiving. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_rx_cur_ma">20</integer>
+
+    <!-- Average Current for bluetooth controller when transmitting. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_tx_cur_ma">33</integer>
+
+    <!-- Operating volatage for bluetooth controller. 0 by default-->
+    <integer translatable="false" name="config_bluetooth_operating_voltage_mv">3700</integer>
+
+
     <!-- Camera Shutter -->
     <!-- Whether camera shutter sound is forced or not  (country specific). -->
     <bool name="config_camera_sound_forced">false</bool>
