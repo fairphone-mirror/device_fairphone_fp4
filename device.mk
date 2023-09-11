@@ -1029,6 +1029,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.rat_on=combine
 
+PRODUCT_SYSTEM_EXT_PROPERTIES += persist.vendor.dpm.feature=11
+
 
 # tflite
 PRODUCT_PACKAGES += \
