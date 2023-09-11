@@ -87,7 +87,6 @@ PRODUCT_HOST_PACKAGES += \
 
 
 # Dynamic partition
-BOARD_DYNAMIC_PARTITION_ENABLE := true # Enable dynamic partitions by default
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
 # Super partition
