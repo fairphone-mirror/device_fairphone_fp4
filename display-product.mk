@@ -40,7 +40,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.sf.perf_fps_early_phase_offset_ns=-5000000 \
     debug.sf.perf_fps_late_sf_phase_offset_ns=-5000000 \
     persist.demo.hdmirotationlock=false \
-    persist.sys.sf.color_mode=9 \
     persist.sys.sf.color_saturation=1.0 \
     vendor.display.comp_mask=0 \
     vendor.display.disable_excl_rect=0 \
