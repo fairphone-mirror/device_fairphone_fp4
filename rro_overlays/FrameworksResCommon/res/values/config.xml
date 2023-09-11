@@ -382,4 +382,8 @@
     <!-- Is the device capable of hot swapping an UICC Card -->
     <bool name="config_hotswapCapable">true</bool>
 
+    <!-- set to false if we need to show user confirmation
+         when alpha identifier is not provided by the UICC -->
+    <bool name="config_stkNoAlphaUsrCnf">false</bool>
+
 </resources>
