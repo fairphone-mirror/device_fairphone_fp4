@@ -140,7 +140,7 @@
   <item name="cpu.suspend">0</item>
 
   <!-- This is the battery capacity in mAh (measured at nominal voltage) -->
-  <item name="battery.capacity">3300</item>
+  <item name="battery.capacity">3905</item>
 
   <item name="wifi.on">0.1</item>  <!-- ~3mA -->
   <item name="wifi.active">156</item>  <!-- WIFI data transfer, ~200mA -->
