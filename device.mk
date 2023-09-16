@@ -370,7 +370,6 @@ PRODUCT_PACKAGES += \
     gralloc.default \
     gralloc.lito \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libdrm \
     libgralloc.qti \
     libgui_vendor \
@@ -576,7 +575,6 @@ PRODUCT_PACKAGES += \
 
 # HIDL
 PRODUCT_PACKAGES += \
-    android.hidl.base@1.0 \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
@@ -816,12 +814,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.nfc_nci=pn54x
 
 
-# Oemaids
-PRODUCT_PACKAGES += \
-    liboemaids_system \
-    liboemaids_vendor
-
-
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.oem_unlock_supported=1
@@ -1034,11 +1026,6 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += persist.vendor.dpm.feature=11
 # tflite
 PRODUCT_PACKAGES += \
     libtflite
-
-
-# Tinyxml
-PRODUCT_PACKAGES += \
-    libtinyxml
 
 
 # Thermal
