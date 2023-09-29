@@ -145,7 +145,6 @@ PRODUCT_PACKAGES += \
     libaudiohal@6.0 \
     liba2dpoffload \
     libbatterylistener \
-    libcirrusspkrprot \
     libcomprcapture \
     libexthwplugin \
     libhdmiedid \
