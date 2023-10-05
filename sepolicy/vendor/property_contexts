@@ -1,0 +1,10 @@
+vendor.tct.                             u:object_r:vendor_tct_default_prop:s0
+ro.vendor.tct.                          u:object_r:vendor_tct_default_prop:s0
+persist.camera.stats.test               u:object_r:vendor_pdaf_camera_prop:s0
+persist.camera.stats.disablehaf         u:object_r:vendor_pdaf_camera_prop:s0
+vendor.tinfo.                           u:object_r:vendor_t2m_info_prop:s0
+
+vendor.t2m.                             u:object_r:vendor_t2m_sys_prop:s0
+ro.vendor.t2m.                          u:object_r:vendor_t2m_sys_prop:s0
+
+vendor.t2m.disable.lpm                  u:object_r:vendor_t2m_sys_prop:s0
