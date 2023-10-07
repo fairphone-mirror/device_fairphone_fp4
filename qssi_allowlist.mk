@@ -16,7 +16,6 @@ system/framework/tcmiface.jar \
 system/framework/tcmclient.jar \
 system/framework/telephony-ext.jar \
 system/lib/libcurl.so \
-system/lib64/libbluetooth-binder.so \
 system/lib64/libmediaplayerservice.so \
 system/lib64/libstagefright_httplive.so \
 system/usr/keylayout/gpio-keys.kl \
