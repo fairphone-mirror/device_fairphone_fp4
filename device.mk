@@ -1177,11 +1177,6 @@ SOONG_CONFIG_NAMESPACES += qtiunifeddraw
 SOONG_CONFIG_qtiunifeddraw := qtiunifeddraw_enabled
 SOONG_CONFIG_qtiunifeddraw_qtiunifeddraw_enabled := true
 
-# lights
-SOONG_CONFIG_NAMESPACES += lights
-SOONG_CONFIG_lights += lighttargets
-SOONG_CONFIG_lights_lighttargets := lightaidlV1target
-
 
 # Inherit the proprietary setup
 $(call inherit-product, device/fairphone/fp4-proprietary/device-vendor.mk)
