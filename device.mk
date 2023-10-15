@@ -1156,6 +1156,11 @@ PRODUCT_COPY_FILES += \
 #    $(FP_PATH)/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml
 
 
+# Enable zygote critical window.
+PRODUCT_VENDOR_PROPERTIES += \
+    zygote.critical_window.minute=10
+
+
 #soong namespace for qssi vs vendor differentiation
 SOONG_CONFIG_NAMESPACES += qssi_vs_vendor
 SOONG_CONFIG_qssi_vs_vendor += qssi_or_vendor
