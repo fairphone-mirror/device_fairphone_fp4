@@ -856,7 +856,28 @@ PRODUCT_COPY_FILES += \
 
 
 # NFC
-$(call inherit-product, vendor/st/nfc/st21nfc/NfcDeviceConfig.mk)
+PRODUCT_PACKAGES += \
+    NfcNci \
+    Tag \
+    android.hardware.nfc@1.2-service.st \
+    com.android.nfc_extras \
+    com.st.android.nfc_extensions \
+    com.st.android.nfc_extensions.xml \
+    init.stnfc.rc
+
+# Config files
+PRODUCT_COPY_FILES += \
+    $(FP_PATH)/nfc/libnfc-hal-st.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-hal-st.conf:st \
+    $(FP_PATH)/nfc/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf:st \
+    $(FP_PATH)/nfc/libnfc-nci_product.conf:$(TARGET_COPY_OUT_PRODUCT)/etc/libnfc-nci.conf \
+    $(FP_PATH)/nfc/st21nfc_conf.txt:$(TARGET_COPY_OUT_VENDOR)/etc/st21nfc_conf.txt
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.nfc.hce.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hce.xml:st \
+    frameworks/native/data/etc/android.hardware.nfc.hcef.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.hcef.xml:st \
+    frameworks/native/data/etc/android.hardware.nfc.uicc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.uicc.xml:st \
+    frameworks/native/data/etc/android.hardware.nfc.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.nfc.xml:st
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.st_nfc_defaut_se=SIM1 \
